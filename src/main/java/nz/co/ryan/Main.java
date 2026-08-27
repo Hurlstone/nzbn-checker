@@ -29,8 +29,9 @@ public class Main {
         String baseUrl = "https://api.business.govt.nz/gateway/nzbn/v5/entities/";
         String requestUrl = baseUrl + nzbn;
 
-        System.out.println("Requesting:");
-        System.out.println(requestUrl);
+        // omitted as we don't need to see everything
+        //System.out.println("Requesting:");
+        //System.out.println(requestUrl);
 
         String apiKey = System.getenv("NZBN_API_KEY");
 
@@ -55,8 +56,9 @@ public class Main {
         HttpClient client = HttpClient.newHttpClient();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println("Status: " + response.statusCode());
-        //System.out.println(response.body()); omitted as we don't need to see everything
+        // omitted as we don't need to see everything, was for debugging
+        //System.out.println("Status: " + response.statusCode());
+        //System.out.println(response.body());
 
         //Parsing the response of the requests
         ObjectMapper objectMapper = new ObjectMapper();

@@ -37,3 +37,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### NZBN Checker ###
+.env
+.idea/
